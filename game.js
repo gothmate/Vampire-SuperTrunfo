@@ -102,13 +102,27 @@ function selecionaAtributo() {
 function jogar() {
   let atributoSelecionado = selecionaAtributo()
   let resultadoJogo = document.getElementById('resultado')
-  console.log(atributoSelecionadoMaquina)
-  console.log(atributoSelecionado)
-  
+
+  msgVitoria = [
+    `<p>Dessa vez, ${cartaJogador.nome} venceu e pode expor sua superioridade.</p>`,
+    `<p>${cartaJogador.nome} venceu. Estará viva para outro confronto.</p>`,
+    `<p>${cartaJogador.nome} está em sua melhor posição. Não precisa de ajuda de ninguém</p>`,
+    `<p>A vitória pertence a ${cartaJogador.nome} e mais ninguém.</p>`]
+
+
+  msgDerrota = [
+    `<p>${cartaJogador.nome} terá que se esconder e esperar a poeira baixar.</p>`,
+    `<p>${cartaJogador.nome} foi derrotada e não vai se expor por algum tempo.</p>`,
+    `<p>A derrota foi demais para ${cartaJogador.nome}. Seu status pode não perdurar.</p>`,
+    `<p>Antes do próximo passo, ${cartaJogador.nome} precisa se recuperar.</p>`,
+    `<p>${cartaJogador.nome} passará um longo período longe dos holofotes.</p>`,
+
+  ]
+
   if (atributoSelecionado > atributoSelecionadoMaquina) {
-    resultadoJogo.innerHTML = `<p>Dessa vez, ${cartaJogador.nome} venceu.</p>`
+    resultadoJogo.innerHTML = msgVitoria[parseInt(Math.random() * msgVitoria.length)]
   } else {
-    resultadoJogo.innerHTML = `<p>${cartaJogador.nome} terá que se esconder e esperar a poeira baixar.</p>`
+    resultadoJogo.innerHTML = msgDerrota[parseInt(Math.random() * msgDerrota.length)]
   }
 
   document.getElementById('btnSortear').disabled = false
