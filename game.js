@@ -14,7 +14,7 @@ let deckMaquina = [
   {
     nome: 'Bibelô',
     cla: 'Tzimisce',
-    imagem: './images/ouros.png',
+    imagem: './images/bibelo.png',
     atributos: { fisico: 5, social: 4, mental: 5, disciplina: 4 }
   }
 ]
