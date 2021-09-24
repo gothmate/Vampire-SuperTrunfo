@@ -2,7 +2,7 @@ let deckMaquina = [
   {
     nome: 'Ouros',
     cla: 'Ravnos',
-    imagem: './images/ouros.jpg',
+    imagem: './images/ouros.png',
     atributos: { fisico: 4, social: 5, mental: 3, disciplina: 5 }
   },
   {
@@ -46,11 +46,9 @@ let cartaJogador
 function sortear() {
   let numeroSorteioMaquina = parseInt(Math.random() * deckMaquina.length)
   cartaMaquina = deckMaquina[numeroSorteioMaquina]
-  console.log(cartaMaquina)
 
   let numeroSorteioJogador = parseInt(Math.random() * deckJogador.length)
   cartaJogador = deckJogador[numeroSorteioJogador]
-  console.log(cartaJogador)
 
   document.getElementById('btnSortear').disabled = true
   document.getElementById('btnJogar').disabled = false
@@ -58,16 +56,18 @@ function sortear() {
   exibirOpcoes()
 }
 
+
+
 function exibirOpcoes() {
   let tagAtributos = ""
   let tagAtributosMc = ""
 
   for (let atributoJogador in cartaJogador.atributos) {
-    tagAtributos += `<input type="radio" name="atributoJogador" value=${atributoJogador}>${atributoJogador} ${cartaJogador.atributos[atributoJogador]}<br>`;
+    tagAtributos += `<input type="radio" id=${atributoJogador} class="atributo-jogador" name=${atributoJogador} value=${cartaJogador.atributos[atributoJogador]}>${atributoJogador} ${cartaJogador.atributos[atributoJogador]}<br>`;
   }
   
   for (let atributoMaquina in cartaMaquina.atributos) {
-    tagAtributosMc += `<input type="radio" name="atributoMaquina" value=${atributoMaquina}>${atributoMaquina} ${cartaMaquina.atributos[atributoMaquina]}<br>`;
+    tagAtributosMc += `<input type="radio" id=${atributoMaquina} class="atributo-maquina" disabled="true" name=${atributoMaquina} value=${cartaMaquina.atributos[atributoMaquina]}>${atributoMaquina}</input><br>`;
   }
  
   document.querySelector('#imagem_carta_jogador').innerHTML = "<img src=" + cartaJogador.imagem + " />"
@@ -79,13 +79,37 @@ function exibirOpcoes() {
   document.querySelector('#card_name_mc').innerHTML = cartaMaquina.nome
   document.querySelector('#card_clan_mc').innerHTML = cartaMaquina.cla
   document.querySelector('#card_opcoes_mc').innerHTML = tagAtributosMc
+}
+
+let atributoSelecionadoMaquina
+
+function selecionaAtributo() {
+  let radioAtributos = document.getElementsByClassName('atributo-jogador');
+  let radioAtributosMc = document.getElementsByClassName('atributo-maquina');
+  
+  
+  for (let i = 0; i < radioAtributos.length; i++) {
+    if (radioAtributos[i].checked) {
+      atributoSelecionadoMaquina = radioAtributosMc[i].value
+      return radioAtributos[i].value 
+    }
+  }
 
 }
 
 
 
 function jogar() {
-  console.log('por fazer')
+  let atributoSelecionado = selecionaAtributo()
+  let resultadoJogo = document.getElementById('resultado')
+  console.log(atributoSelecionadoMaquina)
+  console.log(atributoSelecionado)
+  
+  if (atributoSelecionado > atributoSelecionadoMaquina) {
+    resultadoJogo.innerHTML = `<p>Dessa vez, ${cartaJogador.nome} venceu.</p>`
+  } else {
+    resultadoJogo.innerHTML = `<p>${cartaJogador.nome} terá que se esconder e esperar a poeira baixar.</p>`
+  }
 
   document.getElementById('btnSortear').disabled = false
   document.getElementById('btnJogar').disabled = true
