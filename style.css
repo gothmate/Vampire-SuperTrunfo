@@ -88,48 +88,60 @@ header {
 .content {
   padding: 1.25rem;
   text-align: center;
-  transform: translateY(100px);
-  opacity: 0;
   transition: 0.5s;
 }
 
-.card:hover .content {
-  transform: translateY(0px);
-  opacity: 1;
-}
-
-.card_owner {
-  position: absolute;
-  top: -2.5rem;
-  right: 1.87rem;
-  font-size: 2rem;
-  color: rgba(255, 255, 255, 0.05);
+.card_name {
+  display: grid;
+  width: 100vw;
+  position: relative;
+  /* border: 1px solid red; */
+  top: 0.2rem;
+  right: 4.6rem;
+  font-size: 0.8rem;
+  color: rgb(30, 30, 0);
   pointer-events: none;
 }
 
-.card_title {
+.card_clan {
+  display: grid;
+  position: relative;
+  width: 100vw;
+  /*   border: 1px solid red; */
+  top: 1rem;
+  right: 2rem;
   font-size: 1.8rem;
   color: white;
   z-index: 1;
 }
 
 .card_text {
+  /*   border: 1px solid red; */
+  display: inline-block;
+  position: relative;
+  height: 16rem;
+  width: 11rem;
+  top: 1rem;
+  visibility: hidden;
+  padding: 0.3rem 2rem;
+  background: rgba(0, 0, 0, 0.8);
   font-size: 0.8rem;
   color: white;
   font-weight: 300;
 }
 
-.card_button {
-  position: relative;
-  display: inline-block;
-  padding: 0.5ren 1.25rem;
-  margin-top: 1rem;
-  background: white;
-  color: black;
-  border-radius: 1.25rem;
-  text-decoration: none;
-  font-weight: 500;
-  box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.5);
+.resultado {
+  display: block;
+  width: 27%;
+  height: 50vh;
+  text-align: center;
+  color: white;
+}
+
+.resultado p {
+  margin: 3rem;
+  border: 2px solid white;
+  padding: 1rem;
 }
 
 /* ---------------------------------- */
