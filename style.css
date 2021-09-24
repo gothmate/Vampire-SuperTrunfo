@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+
+  --black: rgb(0, 0, 0);
+  --bgColorSecond: rgb(32, 0, 0);
+  --bloodRed: rgb(122, 9, 9);
+
+  --kemintiri: 'http://3.bp.blogspot.com/-8BnFFFVXdBY/UQa9mcdUZJI/AAAAAAAAPZg/CVn5y4XPUjg/s640/kemintiri.jpg';
+  --genina: 'http://4.bp.blogspot.com/-hgM_yUYca-E/UQBZBQ5VKBI/AAAAAAAAPRo/euFxUa2h43A/s1600/genina.JPG';
+  --valeriusMaior: 'http://1.bp.blogspot.com/-8GuLKAZ_GmM/TjCdNs9IrQI/AAAAAAAAAUE/waZoerlAZhQ/s1600/valerius.jpg';
+  --durgaSyn: 'https://1.bp.blogspot.com/-lPXZi6bwi_4/TnaKfWzklpI/AAAAAAAAAXA/Xw9rRsF17bI/w1200-h630-p-k-no-nu/durga+syn.JPG';
+}
+
+body {
+  background: rgb(31, 26, 20);
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  display: block;
+  background: linear-gradient(to right, var(--black), var(--bgColorSecond));
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--bloodRed);
+}
+
+/* CARDS */
+
+.container {
+  position: relative;
+  background: url('https://www.desktopbackground.org/download/1366x768/2013/05/07/572491_vampire-the-masquerade-bloodlines-city-wallpapers_1440x900_h.jpg');
+  display: flex;
+  border: 2px solid white;
+  justify-content: center;
+  align-items: center;
+  max-width: 100vw;
+  flex-wrap: wrap;
+  z-index: 1;
+}
+
+.btn {
+  display: grid;
+  width: 10vw;
+  place-content: center;
+  padding: 1rem;
+  margin: 1rem 2rem;
+}
+
+.btn a {
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  transition: 300ms ease-in-out;
+}
+
+.btn a:hover {
+  background: var(--bloodRed);
+  padding: 1rem 1.5rem;
+  transition: 300ms ease-in-out;
+}
+
+.card {
+  position: relative;
+  width: 17.5rem;
+  height: 25rem;
+  margin: 1.87rem;
+  box-shadow: 1.25rem 1.25rem 3.125rem rgba(0, 0, 0, 0.5);
+  border-radius: 1.25rem;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.content {
+  padding: 1.25rem;
+  text-align: center;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.card:hover .content {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.card_owner {
+  position: absolute;
+  top: -2.5rem;
+  right: 1.87rem;
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.05);
+  pointer-events: none;
+}
+
+.card_title {
+  font-size: 1.8rem;
+  color: white;
+  z-index: 1;
+}
+
+.card_text {
+  font-size: 0.8rem;
+  color: white;
+  font-weight: 300;
+}
+
+.card_button {
+  position: relative;
+  display: inline-block;
+  padding: 0.5ren 1.25rem;
+  margin-top: 1rem;
+  background: white;
+  color: black;
+  border-radius: 1.25rem;
+  text-decoration: none;
+  font-weight: 500;
+  box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+/* ---------------------------------- */
+
+footer {
+  display: grid;
+  place-content: center;
+  margin: 1.5rem;
+}
+
+footer p {
+  color: #fff;
+}
+
+footer span {
+  font-size: 1.5rem;
+  border: 2px solid greenyellow;
+  padding: 2px;
+  margin: 3px;
+  color: greenyellow;
+}
