@@ -112,9 +112,9 @@ header {
 }
 
 #imagem_carta_maquina  img{
-  position: relative;
-  top: 5rem;
-  left: 33.5rem;
+  position: absolute;
+  top: -0.3rem;
+  left: -.3rem;
   border: 2px solid rebeccapurple;
 }
 
@@ -133,10 +133,10 @@ header {
 #card_name_mc {
   display: grid;
   width: fit-content;
-  position: relative;
+  position: absolute;
   /* border: 1px solid greenyellow; */
-  top: -18.2rem;
-  left: 36rem;
+  top: 2.2rem;
+  left: 2.5rem;
   font-size: 0.9rem;
   color: var(--bloodRed);
   pointer-events: none;
@@ -157,11 +157,12 @@ header {
 
 #card_clan_mc {
   display: grid;
-  position: relative;
+  position: absolute;
   width: 100vw;
   /* border: 1px solid burlywood; */
-  top: -18rem;
-  right: -34.5rem;
+  top: 4rem;
+  left: 0.5rem;
+  padding: 0 1rem;
   background: rgba(255,255,255,.2);
   font-size: 1.8rem;
   color: var(--bloodRed);
@@ -185,11 +186,11 @@ header {
 
 #card_opcoes_mc {
   display: inline-block;
-  position: relative;
+  position: absolute;
   height: 5rem;
   width: 11rem;
-  top: -6rem;
-  left: 35.5rem;
+  top: 18.5rem;
+  left: 3rem;
 
   padding: 0.3rem 2rem;
   font-size: 0.8rem;
@@ -206,7 +207,7 @@ header {
 }
 
 .resultado {
-  display: block;
+  display: grid;
   width: 27%;
   height: 50vh;
   text-align: center;
@@ -241,4 +242,14 @@ footer span {
 span a {
   text-decoration: none;
   color: greenyellow;
+}
+
+@media (min-width: 800) {
+  
+    .resultado {
+    border: 2px solid beige;
+    
+    width: 100%;
+    height: fit-content;
+  }
 }
