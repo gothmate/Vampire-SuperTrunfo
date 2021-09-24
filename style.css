@@ -113,7 +113,7 @@ header {
 
 #imagem_carta_maquina  img{
   position: relative;
-  top: 5.3rem;
+  top: 5rem;
   left: 33.5rem;
   border: 2px solid rebeccapurple;
 }
@@ -135,7 +135,7 @@ header {
   width: fit-content;
   position: relative;
   /* border: 1px solid greenyellow; */
-  top: -17.78rem;
+  top: -18.2rem;
   left: 36rem;
   font-size: 0.9rem;
   color: var(--bloodRed);
@@ -149,6 +149,7 @@ header {
   /* border: 1px solid burlywood; */
   top: -18rem;
   right: 3rem;
+  background: rgba(255,255,255,.2);
   font-size: 1.8rem;
   color: var(--bloodRed);
   z-index: 1;
@@ -160,14 +161,14 @@ header {
   width: 100vw;
   /* border: 1px solid burlywood; */
   top: -18rem;
-  right: -35.5rem;
+  right: -34.5rem;
+  background: rgba(255,255,255,.2);
   font-size: 1.8rem;
   color: var(--bloodRed);
   z-index: 1;
 }
 
 #card_opcoes {
-  /* border: 1px solid red; */
   display: inline-block;
   position: relative;
   height: 5rem;
@@ -183,7 +184,6 @@ header {
 }
 
 #card_opcoes_mc {
-  /* border: 2px solid red; */
   display: inline-block;
   position: relative;
   height: 5rem;
@@ -199,6 +199,9 @@ header {
 }
 
 #card_opcoes input {
+  margin: 0 0.8rem;
+}
+#card_opcoes_mc input {
   margin: 0 0.8rem;
 }
 

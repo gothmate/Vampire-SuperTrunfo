@@ -8,13 +8,13 @@ let deckMaquina = [
   {
     nome: 'Espadas',
     cla: 'Ministério',
-    imagem: './images/bibelo.jpg',
+    imagem: './images/anderson.png',
     atributos: { fisico: 6, social: 3, mental: 4, disciplina: 5 }
   },
   {
     nome: 'Bibelô',
     cla: 'Tzimisce',
-    imagem: './images/bibelo.jpg',
+    imagem: './images/ouros.png',
     atributos: { fisico: 5, social: 4, mental: 5, disciplina: 4 }
   }
 ]
@@ -23,7 +23,7 @@ let deckJogador = [
   {
     nome: 'Cinthia',
     cla: 'Malkavian',
-    imagem: './images/bibelo.jpg',
+    imagem: './images/ouros.png',
     atributos: { fisico: 3, social: 7, mental: 5, disciplina: 6 }
   },
   {
@@ -60,20 +60,26 @@ function sortear() {
 
 function exibirOpcoes() {
   let tagAtributos = ""
+  let tagAtributosMc = ""
 
   for (let atributoJogador in cartaJogador.atributos) {
     tagAtributos += `<input type="radio" name="atributoJogador" value=${atributoJogador}>${atributoJogador} ${cartaJogador.atributos[atributoJogador]}<br>`;
-
+  }
+  
+  for (let atributoMaquina in cartaMaquina.atributos) {
+    tagAtributosMc += `<input type="radio" name="atributoMaquina" value=${atributoMaquina}>${atributoMaquina} ${cartaMaquina.atributos[atributoMaquina]}<br>`;
   }
  
-
-
   document.querySelector('#imagem_carta_jogador').innerHTML = "<img src=" + cartaJogador.imagem + " />"
   document.querySelector('#card_name').innerHTML = cartaJogador.nome
   document.querySelector('#card_clan').innerHTML = cartaJogador.cla
   document.querySelector('#card_opcoes').innerHTML = tagAtributos
+  
+  document.querySelector('#imagem_carta_maquina').innerHTML = "<img src=" + cartaMaquina.imagem + " />"
+  document.querySelector('#card_name_mc').innerHTML = cartaMaquina.nome
+  document.querySelector('#card_clan_mc').innerHTML = cartaMaquina.cla
+  document.querySelector('#card_opcoes_mc').innerHTML = tagAtributosMc
 
-  console.log(tagAtributos)
 }
 
 
