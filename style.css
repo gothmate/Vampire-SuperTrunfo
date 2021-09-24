@@ -8,10 +8,7 @@
   --bgColorSecond: rgb(32, 0, 0);
   --bloodRed: rgb(122, 9, 9);
 
-  --kemintiri: 'http://3.bp.blogspot.com/-8BnFFFVXdBY/UQa9mcdUZJI/AAAAAAAAPZg/CVn5y4XPUjg/s640/kemintiri.jpg';
-  --genina: 'http://4.bp.blogspot.com/-hgM_yUYca-E/UQBZBQ5VKBI/AAAAAAAAPRo/euFxUa2h43A/s1600/genina.JPG';
-  --valeriusMaior: 'http://1.bp.blogspot.com/-8GuLKAZ_GmM/TjCdNs9IrQI/AAAAAAAAAUE/waZoerlAZhQ/s1600/valerius.jpg';
-  --durgaSyn: 'https://1.bp.blogspot.com/-lPXZi6bwi_4/TnaKfWzklpI/AAAAAAAAAXA/Xw9rRsF17bI/w1200-h630-p-k-no-nu/durga+syn.JPG';
+  --imagemCartaJogador: url(./images/gregorio.png);
 }
 
 body {
@@ -38,7 +35,6 @@ header {
   align-items: center;
   max-width: 100vw;
   flex-wrap: wrap;
-  z-index: 1;
 }
 
 .btn {
@@ -68,21 +64,38 @@ header {
   transition: 300ms ease-in-out;
 }
 
-.card {
+/* --------------- CARTAS --------------- */
+
+#carta_jogador {
   position: relative;
   width: 18rem;
   height: 25rem;
   margin: 1.87rem;
   box-shadow: 1.25rem 1.25rem 3.125rem rgba(0, 0, 0, 0.5);
   border-radius: 1.25rem;
-  background: url(./images/template.png);
+  
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(5px);
+}
+
+#carta_maquina {
+  position: relative;
+  width: 18rem;
+  height: 25rem;
+  margin: 1.87rem;
+  box-shadow: 1.25rem 1.25rem 3.125rem rgba(0, 0, 0, 0.5);
+  border-radius: 1.25rem;
+  
+  overflow: hidden;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .content {
@@ -91,43 +104,102 @@ header {
   transition: 0.5s;
 }
 
-.card_name {
+#imagem_carta_jogador img{
+  position: relative;
+  top: 5rem;
+  border: 2px solid rebeccapurple;
+
+}
+
+#imagem_carta_maquina  img{
+  position: relative;
+  top: 5.3rem;
+  left: 33.5rem;
+  border: 2px solid rebeccapurple;
+}
+
+#card_name {
   display: grid;
   width: 100vw;
   position: relative;
-  /* border: 1px solid red; */
-  top: 0.2rem;
-  right: 4.6rem;
-  font-size: 0.8rem;
-  color: rgb(30, 30, 0);
+  /* border: 1px solid greenyellow; */
+  top: -18.2rem;
+  right: 4.3rem;
+  font-size: 0.9rem;
+  color: var(--bloodRed);
   pointer-events: none;
 }
 
-.card_clan {
+#card_name_mc {
+  display: grid;
+  width: fit-content;
+  position: relative;
+  /* border: 1px solid greenyellow; */
+  top: -17.78rem;
+  left: 36rem;
+  font-size: 0.9rem;
+  color: var(--bloodRed);
+  pointer-events: none;
+}
+
+#card_clan {
   display: grid;
   position: relative;
   width: 100vw;
-  /*   border: 1px solid red; */
-  top: 1rem;
-  right: 2rem;
+  /* border: 1px solid burlywood; */
+  top: -18rem;
+  right: 3rem;
   font-size: 1.8rem;
-  color: white;
+  color: var(--bloodRed);
   z-index: 1;
 }
 
-.card_text {
-  /*   border: 1px solid red; */
+#card_clan_mc {
+  display: grid;
+  position: relative;
+  width: 100vw;
+  /* border: 1px solid burlywood; */
+  top: -18rem;
+  right: -35.5rem;
+  font-size: 1.8rem;
+  color: var(--bloodRed);
+  z-index: 1;
+}
+
+#card_opcoes {
+  /* border: 1px solid red; */
   display: inline-block;
   position: relative;
-  height: 16rem;
+  height: 5rem;
   width: 11rem;
-  top: 1rem;
-  visibility: hidden;
+  top: -6rem;
+  left: 1rem;
+
   padding: 0.3rem 2rem;
-  background: rgba(0, 0, 0, 0.8);
   font-size: 0.8rem;
+  text-align: left;
   color: white;
   font-weight: 300;
+}
+
+#card_opcoes_mc {
+  /* border: 2px solid red; */
+  display: inline-block;
+  position: relative;
+  height: 5rem;
+  width: 11rem;
+  top: -6rem;
+  left: 35.5rem;
+
+  padding: 0.3rem 2rem;
+  font-size: 0.8rem;
+  text-align: left;
+  color: white;
+  font-weight: 300;
+}
+
+#card_opcoes input {
+  margin: 0 0.8rem;
 }
 
 .resultado {
@@ -161,5 +233,9 @@ footer span {
   border: 2px solid greenyellow;
   padding: 2px;
   margin: 3px;
+}
+
+span a {
+  text-decoration: none;
   color: greenyellow;
 }

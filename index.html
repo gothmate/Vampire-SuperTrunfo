@@ -13,38 +13,32 @@
     </header>
     <div class="container">
       <div class="btn">
-        <button disabled="false" onclick="Sortear()">Sortear</button>
-        <button disabled="true">Jogar</button>
+        <button id="btnSortear" type="button" onclick="sortear()">
+          Sortear
+        </button>
+        <button id="btnJogar" type="button" onclick="jogar()" disabled="true">
+          Jogar
+        </button>
       </div>
-      <div class="card">
+
+      <div id="carta_jogador" class="card">
         <div class="content">
-          <h2 class="card_name">Jogador</h2>
-          <h3 class="card_clan">Toreador</h3>
-          <p class="card_text">
-            A Camarilla é a maior das seitas vampíricas, uma organização ampla
-            que ostensivamente representa e protege todos os vampiros ao
-            executar e promulgar a Máscara. Atualmente composta por seis dos
-            sete clãs originais, embora oficialmente considere todos os Membros
-            sob seu alcance e receba qualquer um que obedeça suas leis.
-          </p>
-          <div class="atributos"></div>
+          <div id="imagem_carta_jogador"><!-- <img src="./images/ouros.png" /> --></div>
+          <div id="card_name">Ouros</div>
+          <div id="card_clan">Ravnos</div>
+          <div id="card_opcoes"></div>
         </div>
       </div>
 
-      <div class="card">
-        <div class="content">
-          <h2 class="card_name">Jogador</h2>
-          <h3 class="card_clan">Nosferatu</h3>
-          <p class="card_text">
-            Em Vampiro: A Máscara, o Sabá é uma ampla organização de cainitas
-            que rejeita as Tradições. Diferente da Camarilla, o Sabá acredita
-            nos Antediluvianos e em Caim. Também conhecido como a Espada de
-            Caim, pois creem que serão o exército que Caim usará para destruir
-            os Antediluvianos quando a Gehenna chegar.
-          </p>
-          <div class="atributos"></div>
+      <div id="carta_maquina" class="card">
+        <div id="content">
+          <!-- <div id="imagem_carta_maquina"><img src="./images/anderson.png" /></div> -->
+          <div id="card_name_mc">Anderson</div>
+          <div id="card_clan_mc">Nosferatu</div>
+          <div id="card_opcoes_mc"></div>
         </div>
       </div>
+
       <div class="resultado">
         <h3>As Seitas nunca se reconciliam de fato</h3>
         <p>Dessa vez, Camarilla venceu</p>
@@ -52,7 +46,12 @@
     </div>
 
     <footer>
-      <p>criado por <span>Goth</span>mate®</p>
+      <p>
+        criado por
+        <span
+          ><a href="https://gothmate.github.io/" target="_blank">Goth</a></span
+        >mate®
+      </p>
     </footer>
     <script src="game.js"></script>
     <script src="main.js"></script>
