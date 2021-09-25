@@ -137,14 +137,19 @@ function jogar() {
 
   msgVitoria = [
     `<p>Dessa vez, ${cartaJogador.nome} venceu e pode expor sua superioridade.</p>`,
-    `<p>${cartaJogador.nome} venceu. Estará viva para outro confronto.</p>`,
+    `<p>${cartaJogador.nome} venceu. Estará vivo(a) para outro confronto.</p>`,
     `<p>${cartaJogador.nome} está em sua melhor posição. Não precisa de ajuda de ninguém</p>`,
-    `<p>A vitória pertence a ${cartaJogador.nome} e mais ninguém.</p>`]
+    `<p>A vitória pertence a ${cartaJogador.nome} e mais ninguém.</p>`,
+    `<p>${cartaJogador.nome} derrotou ${cartaMaquina.nome} e ganha aalgum prestígio na Camarilla</p>`,
+    `<p>${cartaMaquina.nome} caiu e ${cartaJogador.nome} reina superior.</p>`,
+    `<p>${cartaMaquina.nome} foi avisado(a). ${cartaJogador.nome} não tolera desajustados.</p>`,
+    `<p>${cartaJogador.nome} tem um vislumbre do status que vem com a vitória.</p>`,
+    `<p>${cartaMaquina.nome} nunca se sentiu tão bem em ter seu nome entre as Harpias.</p>`]
 
 
   msgDerrota = [
     `<p>${cartaJogador.nome} terá que se esconder e esperar a poeira baixar.</p>`,
-    `<p>${cartaJogador.nome} foi derrotada e não vai se expor por algum tempo.</p>`,
+    `<p>${cartaJogador.nome} foi derrotado(a) e não vai se expor por algum tempo.</p>`,
     `<p>A derrota foi demais para ${cartaJogador.nome}. Seu status pode não perdurar.</p>`,
     `<p>Antes do próximo passo, ${cartaJogador.nome} precisa se recuperar.</p>`,
     `<p>${cartaJogador.nome} passará um longo período longe dos holofotes.</p>`,
