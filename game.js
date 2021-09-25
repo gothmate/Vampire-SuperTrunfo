@@ -190,13 +190,13 @@ let deckJogador = [
   },
   {
     nome: 'Andrew',
-    cla: 'Ministério',
+    cla: 'Setita',
     imagem: './images/andrew.png',
     atributos: { fisico: 4, social: 3, mental: 3, disciplina: 5 }
   },
   {
     nome: 'Samira',
-    cla: 'Ministério',
+    cla: 'Setita',
     imagem: './images/samira.png',
     atributos: { fisico: 3, social: 4, mental: 3, disciplina: 3 }
   },
@@ -220,13 +220,14 @@ let deckJogador = [
   },
 ]
 
+/* --------------- Funções do Jogo --------------- */
+
 let cartaMaquina
 let cartaJogador
 
 function addStyle() {
   console.log('criando')
 }
-
 
 function sortear() {
 
@@ -243,8 +244,6 @@ function sortear() {
 
   exibirOpcoes()
 }
-
-
 
 function exibirOpcoes() {
   let tagAtributos = ""
@@ -285,8 +284,6 @@ function selecionaAtributo() {
 
 }
 
-
-
 function jogar() {
   let atributoSelecionado = selecionaAtributo()
   let resultadoJogo = document.getElementById('resultado')
@@ -311,13 +308,17 @@ function jogar() {
     `<p>${cartaJogador.nome} passará um longo período longe dos holofotes.</p>`,
   ]
 
-  msgEmpate = `<p>Esta é uma noite carioca incomum. Os predadores se encaram, mas não rosnam.</p>`
+  msgEmpate = [
+    `<p>Esta é uma noite carioca incomum. Os predadores se encaram, mas não rosnam.</p>`,
+    `<p>${cartaJogador.nome} fica contente em poder dizer que não é mais a presa. Tudo igual entre as feras.</p>`,
+    `<p>${cartaJogador.nome} e ${cartaMaquina.nome} se encaram e planejam o que farão em seu próximo encontro. Hoje, ninguém saiu na pior.</p>`,
+  ]
   
 
   if (atributoSelecionado > atributoSelecionadoMaquina) {
     resultadoJogo.innerHTML = msgVitoria[parseInt(Math.random() * msgVitoria.length)]
   } else if (atributoSelecionado == atributoSelecionadoMaquina) {
-    resultadoJogo.innerHTML = msgEmpate
+    resultadoJogo.innerHTML = msgEmpate[parseInt(Math.random() * msgEmpate.length)]
   } else {
     resultadoJogo.innerHTML = msgDerrota[parseInt(Math.random() * msgDerrota.length)]
   }
