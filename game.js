@@ -43,7 +43,15 @@ let deckJogador = [
 let cartaMaquina
 let cartaJogador
 
+function addStyle() {
+  console.log('criando')
+}
+
+
 function sortear() {
+
+  addStyle()
+
   let numeroSorteioMaquina = parseInt(Math.random() * deckMaquina.length)
   cartaMaquina = deckMaquina[numeroSorteioMaquina]
 

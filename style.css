@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:100, 200, 300,400,500,600,700,800,900');
 
 * {
   margin: 0;
@@ -14,6 +14,7 @@
 body {
   background: rgb(31, 26, 20);
   font-family: 'Poppins', sans-serif;
+  font-weight: 700;
 }
 
 header {
@@ -21,7 +22,7 @@ header {
   background: linear-gradient(to right, var(--black), var(--bgColorSecond));
   text-align: center;
   padding: 1.5rem;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: var(--bloodRed);
 }
 
@@ -102,6 +103,17 @@ header {
   padding: 1.25rem;
   text-align: center;
   transition: 0.5s;
+  color: white;
+}
+
+.initial-card {
+  display: grid;
+  position: absolute;
+  z-index: -1;
+  top: 2rem;
+  left: 1rem;
+  place-content: center;
+  max-width: 16rem;
 }
 
 #imagem_carta_jogador img{
@@ -122,7 +134,6 @@ header {
   display: grid;
   width: 100vw;
   position: relative;
-  /* border: 1px solid greenyellow; */
   top: -18.2rem;
   right: 4.3rem;
   font-size: 0.9rem;
@@ -134,7 +145,6 @@ header {
   display: grid;
   width: fit-content;
   position: absolute;
-  /* border: 1px solid greenyellow; */
   top: 2.2rem;
   left: 2.5rem;
   font-size: 0.9rem;
@@ -143,30 +153,32 @@ header {
 }
 
 #card_clan {
-  display: grid;
+  display: block;
   position: relative;
   width: 100vw;
-  /* border: 1px solid burlywood; */
   top: -18rem;
   right: 3rem;
-  background: rgba(255,255,255,.2);
+  background: rgba(255,255,255,.4);
   font-size: 1.8rem;
+  font-weight: 800;
   color: var(--bloodRed);
   z-index: 1;
+  pointer-events: none;
 }
 
 #card_clan_mc {
-  display: grid;
+  display: block;
   position: absolute;
-  width: 100vw;
-  /* border: 1px solid burlywood; */
+  width: 22rem;
   top: 4rem;
-  left: 0.5rem;
+  left: -6rem;
   padding: 0 1rem;
-  background: rgba(255,255,255,.2);
+  background: rgba(255,255,255,.4);
   font-size: 1.8rem;
+  font-weight: 800;
   color: var(--bloodRed);
   z-index: 1;
+  pointer-events: none;
 }
 
 #card_opcoes {
@@ -179,6 +191,7 @@ header {
 
   padding: 0.3rem 2rem;
   font-size: 0.8rem;
+  font-weight: 700;
   text-align: left;
   color: white;
   font-weight: 300;
@@ -194,6 +207,7 @@ header {
 
   padding: 0.3rem 2rem;
   font-size: 0.8rem;
+  font-weight: 700;
   text-align: left;
   color: white;
   font-weight: 300;
