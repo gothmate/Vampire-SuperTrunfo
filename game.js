@@ -3,13 +3,19 @@ let deckMaquina = [
     nome: 'Ouros',
     cla: 'Ravnos',
     imagem: './images/ouros.png',
-    atributos: { fisico: 4, social: 5, mental: 3, disciplina: 5 }
+    atributos: { fisico: 3, social: 6, mental: 5, disciplina: 4 }
   },
   {
     nome: 'Espadas',
     cla: 'Lasombra',
     imagem: './images/espadas.png',
     atributos: { fisico: 5, social: 3, mental: 4, disciplina: 5 }
+  },
+  {
+    nome: 'Copas',
+    cla: 'Toreador',
+    imagem: './images/copas.png',
+    atributos: { fisico: 3, social: 4, mental: 2, disciplina: 3 }
   },
   {
     nome: 'Bibelô',
@@ -27,7 +33,19 @@ let deckMaquina = [
     nome: 'Sabrina',
     cla: `Lasombra`,
     imagem: './images/sabrina.png',
-    atributos: { fisico: 4, social: 4, mental: 2, disciplina: 5 }
+    atributos: { fisico: 3, social: 4, mental: 2, disciplina: 3 }
+  },
+  {
+    nome: 'Luciano',
+    cla: `Lasombra`,
+    imagem: './images/luciano.png',
+    atributos: { fisico: 4, social: 5, mental: 4, disciplina: 5 }
+  },
+  {
+    nome: 'João e Maria',
+    cla: `Panders`,
+    imagem: './images/joaomaria.png',
+    atributos: { fisico: 4, social: 6, mental: 5, disciplina: 3 }
   },
 ]
 
@@ -61,6 +79,78 @@ let deckJogador = [
     cla: 'Brujah',
     imagem: './images/bianca.png',
     atributos: { fisico: 5, social: 4, mental: 3, disciplina: 4 }
+  },
+  {
+    nome: 'Heitor',
+    cla: 'Brujah',
+    imagem: './images/heitor.png',
+    atributos: { fisico: 4, social: 3, mental: 4, disciplina: 4 }
+  },
+  {
+    nome: 'Sinfonia',
+    cla: 'Filha da Cacofonia',
+    imagem: './images/sinfonia.png',
+    atributos: { fisico: 2, social: 4, mental: 3, disciplina: 4 }
+  },
+  {
+    nome: 'Fellini',
+    cla: 'Gangrel',
+    imagem: './images/fellini.png',
+    atributos: { fisico: 5, social: 3, mental: 4, disciplina: 6 }
+  },
+  {
+    nome: 'Lucas',
+    cla: 'Gangrel',
+    imagem: './images/lucas.png',
+    atributos: { fisico: 4, social: 3, mental: 3, disciplina: 3 }
+  },
+  {
+    nome: 'Adriana',
+    cla: 'Gangrel',
+    imagem: './images/adriana.png',
+    atributos: { fisico: 4, social: 3, mental: 4, disciplina: 2 }
+  },
+  {
+    nome: 'Abutre',
+    cla: 'Makaviano',
+    imagem: './images/abutre.png',
+    atributos: { fisico: 4, social: 2, mental: 4, disciplina: 3 }
+  },
+  {
+    nome: 'Cipriano',
+    cla: 'Nosferatu',
+    imagem: './images/cipriano.png',
+    atributos: { fisico: 3, social: 4, mental: 4, disciplina: 3 }
+  },
+  {
+    nome: 'Andrew',
+    cla: 'Ministério',
+    imagem: './images/andrew.png',
+    atributos: { fisico: 4, social: 3, mental: 3, disciplina: 5 }
+  },
+  {
+    nome: 'Samira',
+    cla: 'Ministério',
+    imagem: './images/samira.png',
+    atributos: { fisico: 3, social: 4, mental: 3, disciplina: 3 }
+  },
+  {
+    nome: 'Gregório',
+    cla: 'Toreador',
+    imagem: './images/gregorio.png',
+    atributos: { fisico: 6, social: 5, mental: 3, disciplina: 6 }
+  },
+  {
+    nome: 'Maya',
+    cla: 'Toreador',
+    imagem: './images/maia.png',
+    atributos: { fisico: 4, social: 3, mental: 3, disciplina: 4 }
+  },
+  {
+    nome: 'Fernando',
+    cla: 'Toreador',
+    imagem: './images/fernando.png',
+    atributos: { fisico: 3, social: 4, mental: 3, disciplina: 3 }
   },
 ]
 
@@ -144,7 +234,7 @@ function jogar() {
     `<p>${cartaMaquina.nome} caiu e ${cartaJogador.nome} reina superior.</p>`,
     `<p>${cartaMaquina.nome} foi avisado(a). ${cartaJogador.nome} não tolera desajustados.</p>`,
     `<p>${cartaJogador.nome} tem um vislumbre do status que vem com a vitória.</p>`,
-    `<p>${cartaMaquina.nome} nunca se sentiu tão bem em ter seu nome entre as Harpias.</p>`]
+    `<p>${cartaJogador.nome} nunca se sentiu tão bem em ter seu nome entre as Harpias.</p>`]
 
 
   msgDerrota = [
@@ -153,11 +243,15 @@ function jogar() {
     `<p>A derrota foi demais para ${cartaJogador.nome}. Seu status pode não perdurar.</p>`,
     `<p>Antes do próximo passo, ${cartaJogador.nome} precisa se recuperar.</p>`,
     `<p>${cartaJogador.nome} passará um longo período longe dos holofotes.</p>`,
-
   ]
+
+  msgEmpate = `<p>Esta é uma noite carioca incomum. Os predadores se encaram, mas não rosnam.</p>`
+  
 
   if (atributoSelecionado > atributoSelecionadoMaquina) {
     resultadoJogo.innerHTML = msgVitoria[parseInt(Math.random() * msgVitoria.length)]
+  } else if (atributoSelecionado == atributoSelecionadoMaquina) {
+    resultadoJogo.innerHTML = msgEmpate
   } else {
     resultadoJogo.innerHTML = msgDerrota[parseInt(Math.random() * msgDerrota.length)]
   }
