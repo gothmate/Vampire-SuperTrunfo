@@ -21,8 +21,8 @@ header {
   display: block;
   background: linear-gradient(to right, var(--black), var(--bgColorSecond));
   text-align: center;
-  padding: 1.5rem;
-  font-size: 1.6rem;
+  padding: 0.5rem;
+  font-size: 1.3rem;
   color: var(--bloodRed);
 }
 
@@ -35,6 +35,7 @@ header {
   justify-content: center;
   align-items: center;
   max-width: 100vw;
+  min-height: 80vh;
   flex-wrap: wrap;
 }
 
@@ -239,7 +240,7 @@ header {
 footer {
   display: grid;
   place-content: center;
-  margin: 1.5rem;
+  margin: 1rem 0;
 }
 
 footer p {
