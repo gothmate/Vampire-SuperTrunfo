@@ -153,7 +153,7 @@ header {
 }
 
 #card_clan {
-  display: block;
+  display: grid;
   position: relative;
   width: 100vw;
   top: -18rem;

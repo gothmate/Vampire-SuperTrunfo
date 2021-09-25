@@ -7,37 +7,61 @@ let deckMaquina = [
   },
   {
     nome: 'Espadas',
-    cla: 'Ministério',
-    imagem: './images/anderson.png',
-    atributos: { fisico: 6, social: 3, mental: 4, disciplina: 5 }
+    cla: 'Lasombra',
+    imagem: './images/espadas.png',
+    atributos: { fisico: 5, social: 3, mental: 4, disciplina: 5 }
   },
   {
     nome: 'Bibelô',
-    cla: 'Tzimisce',
+    cla: `Malkaviana`,
     imagem: './images/bibelo.png',
-    atributos: { fisico: 5, social: 4, mental: 5, disciplina: 4 }
-  }
+    atributos: { fisico: 4, social: 3, mental: 3, disciplina: 5 }
+  },
+  {
+    nome: 'Porcelana',
+    cla: `Pander`,
+    imagem: './images/porcelana.png',
+    atributos: { fisico: 4, social: 2, mental: 1, disciplina: 5 }
+  },
+  {
+    nome: 'Sabrina',
+    cla: `Lasombra`,
+    imagem: './images/sabrina.png',
+    atributos: { fisico: 4, social: 4, mental: 2, disciplina: 5 }
+  },
 ]
 
 let deckJogador = [
   {
-    nome: 'Cinthia',
-    cla: 'Malkavian',
-    imagem: './images/ouros.png',
-    atributos: { fisico: 3, social: 7, mental: 5, disciplina: 6 }
+    nome: 'Cintia',
+    cla: 'Malkaviana',
+    imagem: './images/cintia.png',
+    atributos: { fisico: 3, social: 5, mental: 5, disciplina: 6 }
   },
   {
     nome: 'Anderson',
     cla: 'Nosferatu',
     imagem: './images/anderson.png',
-    atributos: { fisico: 6, social: 8, mental: 5, disciplina: 3 }
+    atributos: { fisico: 3, social: 4, mental: 4, disciplina: 3 }
   },
   {
     nome: 'Marquesa',
     cla: 'Nosferatu',
-    imagem: './images/anderson.png',
-    atributos: { fisico: 8, social: 6, mental: 5, disciplina: 2 }
-  }
+    imagem: './images/marquesa.png',
+    atributos: { fisico: 4, social: 4, mental: 5, disciplina: 5 }
+  },
+  {
+    nome: 'Helena',
+    cla: 'Giovanni',
+    imagem: './images/helena.png',
+    atributos: { fisico: 3, social: 5, mental: 3, disciplina: 4 }
+  },
+  {
+    nome: 'Bianca',
+    cla: 'Brujah',
+    imagem: './images/bianca.png',
+    atributos: { fisico: 5, social: 4, mental: 3, disciplina: 4 }
+  },
 ]
 
 let cartaMaquina
