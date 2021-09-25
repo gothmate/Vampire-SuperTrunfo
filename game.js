@@ -47,6 +47,30 @@ let deckMaquina = [
     imagem: './images/joaomaria.png',
     atributos: { fisico: 4, social: 6, mental: 5, disciplina: 3 }
   },
+  {
+    nome: 'Acemira',
+    cla: `Tzimisce`,
+    imagem: './images/acemira.png',
+    atributos: { fisico: 7, social: 5, mental: 6, disciplina: 6 }
+  },
+  {
+    nome: 'Feia',
+    cla: `Tzimisce`,
+    imagem: './images/feia.png',
+    atributos: { fisico: 4, social: 4, mental: 3, disciplina: 4 }
+  },
+  {
+    nome: 'Dom Victor',
+    cla: `Tzimisce`,
+    imagem: './images/dom_victor.png',
+    atributos: { fisico: 7, social: 5, mental: 6, disciplina: 6 }
+  },
+  {
+    nome: 'Penélope',
+    cla: `Ventrue`,
+    imagem: './images/penelope.png',
+    atributos: { fisico: 4, social: 3, mental: 5, disciplina: 6 }
+  },
 ]
 
 let deckJogador = [
@@ -55,6 +79,48 @@ let deckJogador = [
     cla: 'Malkaviana',
     imagem: './images/cintia.png',
     atributos: { fisico: 3, social: 5, mental: 5, disciplina: 6 }
+  },
+  {
+    nome: 'Joseph',
+    cla: 'Ventrue',
+    imagem: './images/joseph.png',
+    atributos: { fisico: 3, social: 4, mental: 3, disciplina: 4 }
+  },
+  {
+    nome: 'Valkiria',
+    cla: 'Ventrue',
+    imagem: './images/valkiria.png',
+    atributos: { fisico: 3, social: 4, mental: 3, disciplina: 2 }
+  },
+  {
+    nome: 'Valkiria',
+    cla: 'Ventrue',
+    imagem: './images/valkiria.png',
+    atributos: { fisico: 3, social: 4, mental: 3, disciplina: 2 }
+  },
+  {
+    nome: 'Eric',
+    cla: 'Ventrue',
+    imagem: './images/eric.png',
+    atributos: { fisico: 3, social: 3, mental: 3, disciplina: 4 }
+  },
+  {
+    nome: 'Vicenzo',
+    cla: 'Tremere',
+    imagem: './images/vicente.png',
+    atributos: { fisico: 3, social: 3, mental: 5, disciplina: 6 }
+  },
+  {
+    nome: 'Sofia',
+    cla: 'Tremere',
+    imagem: './images/sofia.png',
+    atributos: { fisico: 2, social: 4, mental: 4, disciplina: 5 }
+  },
+  {
+    nome: 'Lispector',
+    cla: 'Tremere',
+    imagem: './images/lispector.png',
+    atributos: { fisico: 3, social: 4, mental: 4, disciplina: 2 }
   },
   {
     nome: 'Anderson',
