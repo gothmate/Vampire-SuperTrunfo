@@ -56,14 +56,35 @@ header {
   margin: 1rem;
   padding: 0.5rem 1rem;
   border-radius: 10px;
-  transition: 300ms ease-in-out;
+  transition: 400ms ease-in-out;
   cursor: pointer;
 }
 
 .btn button:hover {
   background: var(--bloodRed);
   padding: 1rem 1.5rem;
-  transition: 300ms ease-in-out;
+  border: var(--bloodRed);
+  transition: 400ms ease-in-out;
+}
+
+.hist-player {
+  position: relative;
+  width: 15rem;
+  height: fit-content;
+  margin: 1rem 0.5rem;
+  padding: 0.8rem;
+  background: rgba(60, 64, 65, .5);
+  border-radius: 10px;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  backdrop-filter: blur(8px);
+  box-shadow: 1.25rem 1.25rem 3rem rgba(0, 0, 0, 0.5);
+}
+
+.box-hist{
+  color: #fff;
+  font-weight: 400;
+  text-align: justify;
 }
 
 /* --------------- CARTAS --------------- */
@@ -72,7 +93,7 @@ header {
   position: relative;
   width: 18rem;
   height: 25rem;
-  margin: 1.87rem;
+  margin: 0 0.5rem 0 1.5rem;
   box-shadow: 1.25rem 1.25rem 3.125rem rgba(0, 0, 0, 0.5);
   border-radius: 1.25rem;
   
@@ -88,7 +109,7 @@ header {
   position: relative;
   width: 18rem;
   height: 25rem;
-  margin: 1.87rem;
+  margin: 0 0.5rem 0 0.5rem;
   box-shadow: 1.25rem 1.25rem 3.125rem rgba(0, 0, 0, 0.5);
   border-radius: 1.25rem;
   
@@ -158,9 +179,9 @@ header {
   position: relative;
   width: 100vw;
   top: -18rem;
-  right: 3rem;
+  right: 2rem;
   background: rgba(255,255,255,.4);
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   font-weight: 800;
   color: var(--bloodRed);
   z-index: 1;
@@ -172,10 +193,10 @@ header {
   position: absolute;
   width: 22rem;
   top: 4rem;
-  left: -6rem;
+  left: -7rem;
   padding: 0 1rem;
   background: rgba(255,255,255,.4);
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   font-weight: 800;
   color: var(--bloodRed);
   z-index: 1;
@@ -223,16 +244,33 @@ header {
 
 .resultado {
   display: grid;
+  position: relative;
   width: 27%;
-  height: 50vh;
+  height: fit-content;
   text-align: center;
   color: white;
+
+  margin: 0 0.5rem 0 0.5rem;
+  padding: 0.5rem;
+  background: rgba(60, 64, 65, .5);
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 300;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  backdrop-filter: blur(8px);
+  box-shadow: 1.25rem 1.25rem 3rem rgba(0, 0, 0, 0.5);
 }
 
 .resultado p {
-  margin: 3rem;
-  border: 2px solid white;
+  margin: 1.5rem 0.5rem;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+  font-size: 1.1rem;
+  font-weight: 300;
   padding: 1rem;
+  border-radius: 10px;
+  box-shadow: inset 1.25rem 1.25rem 3rem rgba(0, 0, 0, 0.3);
 }
 
 /* ---------------------------------- */
