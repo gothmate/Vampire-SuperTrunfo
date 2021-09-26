@@ -93,7 +93,7 @@ header {
   position: relative;
   width: 18rem;
   height: 25rem;
-  margin: 0 0.5rem 0 1.5rem;
+  margin: 0.5rem 0.5rem 0 1.5rem;
   box-shadow: 1.25rem 1.25rem 3.125rem rgba(0, 0, 0, 0.5);
   border-radius: 1.25rem;
   
@@ -109,7 +109,7 @@ header {
   position: relative;
   width: 18rem;
   height: 25rem;
-  margin: 0 0.5rem 0 0.5rem;
+  margin: 0.5rem ;
   box-shadow: 1.25rem 1.25rem 3.125rem rgba(0, 0, 0, 0.5);
   border-radius: 1.25rem;
   
@@ -140,7 +140,7 @@ header {
 
 #imagem_carta_jogador img{
   position: relative;
-  top: 5rem;
+  top: 4.8rem;
   border: 2px solid rebeccapurple;
 
 }
@@ -245,7 +245,7 @@ header {
 .resultado {
   display: grid;
   position: relative;
-  width: 27%;
+  width: 30vw;
   height: fit-content;
   text-align: center;
   color: white;
@@ -302,7 +302,7 @@ span a {
     .resultado {
     border: 2px solid beige;
     
-    width: 100%;
+    width: 100vw;
     height: fit-content;
   }
 }
