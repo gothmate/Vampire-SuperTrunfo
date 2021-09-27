@@ -287,7 +287,7 @@ function exibirOpcoes() {
   let tagAtributosMc = ""
 
   for (let atributoJogador in cartaJogador.atributos) {
-    tagAtributos += `<input type="radio" id=${atributoJogador} class="atributo-jogador" name=${atributoJogador} value=${cartaJogador.atributos[atributoJogador]}>${atributoJogador} ${cartaJogador.atributos[atributoJogador]}<br>`;
+    tagAtributos += `<input for="opcoes" type="radio" id=${atributoJogador} class="atributo-jogador" name="atributos" value=${cartaJogador.atributos[atributoJogador]}>${atributoJogador} ${cartaJogador.atributos[atributoJogador]}<br>`;
   }
   
   for (let atributoMaquina in cartaMaquina.atributos) {
@@ -303,6 +303,8 @@ function exibirOpcoes() {
   document.querySelector('#card_name_mc').innerHTML = cartaMaquina.nome
   document.querySelector('#card_clan_mc').innerHTML = cartaMaquina.cla
   document.querySelector('#card_opcoes_mc').innerHTML = tagAtributosMc
+
+  
 }
 
 let atributoSelecionadoMaquina
@@ -335,8 +337,8 @@ function jogar() {
     `<p>${cartaMaquina.nome} caiu e ${cartaJogador.nome} reina superior.</p>`,
     `<p>${cartaMaquina.nome} foi avisado(a). ${cartaJogador.nome} não tolera desajustados.</p>`,
     `<p>${cartaJogador.nome} tem um vislumbre do status que vem com a vitória.</p>`,
-    `<p>${cartaJogador.nome} nunca se sentiu tão bem em ter seu nome entre as Harpias.</p>`]
-
+    `<p>${cartaJogador.nome} nunca se sentiu tão bem em ter seu nome entre as Harpias.</p>`
+  ]
 
   msgDerrota = [
     `<p>${cartaJogador.nome} terá que se esconder e esperar a poeira baixar.</p>`,

@@ -22,7 +22,7 @@ header {
   background: linear-gradient(to right, var(--black), var(--bgColorSecond));
   text-align: center;
   padding: 0.5rem;
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: var(--bloodRed);
 }
 
@@ -298,10 +298,14 @@ span a {
 }
 
 @media (min-width: 800) {
+
+    header {
+      font-size: 0.5rem;    
+    }
   
     .resultado {
-    border: 2px solid beige;
-    
+    border: 1px solid beige;
+    margin: 1rem 0;
     width: 100vw;
     height: fit-content;
   }
