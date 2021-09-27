@@ -273,6 +273,67 @@ header {
   box-shadow: inset 1.25rem 1.25rem 3rem rgba(0, 0, 0, 0.3);
 }
 
+.pontuacao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 2rem;
+}
+
+.drops {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.drop {
+  display: grid;
+  border-bottom: 1px solid white;
+  border-left: 1px solid white;
+  border-top: 1px solid rgb(83, 83, 83);
+  border-right: 1px solid rgb(83, 83, 83);
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0 0.3rem;
+  border-radius: 0 50% 50% 50%;
+  transform: rotate(45deg);
+  background: transparent;
+}
+
+#drop1 {
+  border-radius: 0 50% 50% 50%;
+}
+#drop2 {
+  border-radius: 0 50% 50% 50%;
+}
+#drop3 {
+  border-radius: 0 50% 50% 50%;
+}
+#drop4 {
+  border-radius: 0 50% 50% 50%;
+}
+#drop5 {
+  border-radius: 0 50% 50% 50%;
+}
+#drop6 {
+  border-radius: 0 50% 50% 50%;
+}
+#drop7 {
+  border-radius: 0 50% 50% 50%;
+}
+#drop8 {
+  border-radius: 0 50% 50% 50%;
+}
+#drop9 {
+  border-radius: 0 50% 50% 50%;
+}
+#drop10 {
+  border-radius: 0 50% 50% 50%;
+}
+
+
 /* ---------------------------------- */
 
 footer {

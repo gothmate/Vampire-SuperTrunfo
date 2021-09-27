@@ -251,18 +251,16 @@ let deckJogador = [
 
 /* --------------- Funções do Jogo --------------- */
 
+let pontuacao = 5;
 let cartaMaquina
 let cartaJogador
-
-function addStyle() {
-  console.log('criando')
-}
-
 let descJogador = document.querySelector('.box-hist')
+let atributoSelecionadoMaquina
+let resultadoJogo = document.getElementById('resultado')
 
 function sortear() {
-  
-  addStyle()
+
+  renderPontos()
 
   document.querySelector('.initial-card').innerHTML = ""
   document.querySelector('#initial-card').innerHTML = ""
@@ -280,6 +278,36 @@ function sortear() {
   resultadoJogo.innerHTML = cartaMaquina.descricao
   
   exibirOpcoes()
+}
+
+
+function renderPontos() {
+  let drops = {
+    d1:'drop1',
+    d2:'drop2',
+    d3:'drop3',
+    d4:'drop4',
+    d5:'drop5',
+    d6:'drop6',
+    d7:'drop7',
+    d8:'drop8',
+    d9:'drop9',
+    d10:'drop10'
+  }
+  counter = 0
+  let el
+  for (drop in drops) {
+    if(counter < pontuacao){
+      el = document.getElementById(drops[drop])
+      el.style.background = "rgba(122, 9, 9, 0.6)"
+    } else {
+      el = document.getElementById(drops[drop])
+      el.style.background = "none"
+    }
+    counter++ 
+  }
+  counter = 0
+
 }
 
 function exibirOpcoes() {
@@ -307,8 +335,6 @@ function exibirOpcoes() {
   
 }
 
-let atributoSelecionadoMaquina
-
 function selecionaAtributo() {
   let radioAtributos = document.getElementsByClassName('atributo-jogador');
   let radioAtributosMc = document.getElementsByClassName('atributo-maquina');
@@ -323,9 +349,8 @@ function selecionaAtributo() {
 
 }
 
-let resultadoJogo = document.getElementById('resultado')
-
 function jogar() {
+
   let atributoSelecionado = selecionaAtributo()
 
   msgVitoria = [
@@ -353,17 +378,33 @@ function jogar() {
     `<p>${cartaJogador.nome} fica contente em poder dizer que não é mais a presa. Tudo igual entre as feras.</p>`,
     `<p>${cartaJogador.nome} e ${cartaMaquina.nome} se encaram e planejam o que farão em seu próximo encontro. Hoje, ninguém saiu na pior.</p>`,
   ]
+
+  msgEndGame = ['<p>Parabéns! Você é o predador mais eficaz na noite carioca.</p>', '<p>Infelizmente, você se tornou presa entre monstros maiores.</p>' ]
   
 
   if (atributoSelecionado > atributoSelecionadoMaquina) {
     resultadoJogo.innerHTML = msgVitoria[parseInt(Math.random() * msgVitoria.length)]
+    pontuacao++
   } else if (atributoSelecionado == atributoSelecionadoMaquina) {
     resultadoJogo.innerHTML = msgEmpate[parseInt(Math.random() * msgEmpate.length)]
   } else {
     resultadoJogo.innerHTML = msgDerrota[parseInt(Math.random() * msgDerrota.length)]
+    pontuacao--
   }
 
+  
   descJogador.innerHTML = ''
   document.getElementById('btnSortear').disabled = false
   document.getElementById('btnJogar').disabled = true
+  
+  if(pontuacao == 10) {
+    resultadoJogo.innerHTML = msgEndGame[0];
+    document.getElementById('btnSortear').disabled = true
+    document.getElementById('btnJogar').disabled = true
+    
+  } else if(pontuacao == 0) {
+    resultadoJogo.innerHTML = msgEndGame[1];
+    document.getElementById('btnSortear').disabled = true
+    document.getElementById('btnJogar').disabled = true
+  }
 }
