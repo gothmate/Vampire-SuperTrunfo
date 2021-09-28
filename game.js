@@ -379,7 +379,7 @@ function jogar() {
     `<p>${cartaJogador.nome} e ${cartaMaquina.nome} se encaram e planejam o que farão em seu próximo encontro. Hoje, ninguém saiu na pior.</p>`,
   ]
 
-  msgEndGame = ['<p>Parabéns! Você é o predador mais eficaz na noite carioca.</p>', '<p>Infelizmente, você se tornou presa entre monstros maiores.</p>' ]
+  msgEndGame = ['<p>Parabéns! Você é o predador mais eficaz na noite carioca.</p> <button class="restart" type="button" onclick="restart()">Recomeçar</button>', '<p>Infelizmente, você se tornou presa entre monstros maiores.</p> <button class="restart" type="button" onclick="restart()">Recomeçar</button>' ]
   
 
   if (atributoSelecionado > atributoSelecionadoMaquina) {
@@ -401,10 +401,20 @@ function jogar() {
     resultadoJogo.innerHTML = msgEndGame[0];
     document.getElementById('btnSortear').disabled = true
     document.getElementById('btnJogar').disabled = true
+
+    renderPontos()
     
   } else if(pontuacao == 0) {
     resultadoJogo.innerHTML = msgEndGame[1];
     document.getElementById('btnSortear').disabled = true
     document.getElementById('btnJogar').disabled = true
+    renderPontos()
   }
+}
+
+function restart() {
+  document.getElementById('btnSortear').disabled = false
+  sortear()
+  pontuacao = 5
+  renderPontos()
 }

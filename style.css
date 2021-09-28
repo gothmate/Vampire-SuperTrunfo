@@ -333,6 +333,25 @@ header {
   border-radius: 0 50% 50% 50%;
 }
 
+.restart {
+  text-decoration: none;
+  font-size: 1.3rem;
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+  border: 1px solid white;
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  transition: 400ms ease-in-out;
+  cursor: pointer;
+}
+
+.restart:hover {
+  background: var(--bloodRed);
+  padding: 1rem 1.5rem;
+  border: var(--bloodRed);
+  transition: 400ms ease-in-out;
+}
 
 /* ---------------------------------- */
 
