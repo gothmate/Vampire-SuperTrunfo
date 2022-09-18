@@ -9,7 +9,7 @@
   </head>
   <body>
     <header>
-      <h1>Super-Trunfo Vampiro: A Máscara</h1>
+      <img src="./images/vampire-logo.svg" />
     </header>
 
     <div class="container">
@@ -20,52 +20,56 @@
         <button id="btnJogar" type="button" onclick="jogar()" disabled="true">
           Jogar
         </button>
-        <div class="hist-player">
-          <div class="box-hist"></div>
-        </div>
       </div>
-
-      <div id="carta_jogador" class="card">
-        <div class="content">
-          <div id="imagem_carta_jogador"></div>
-          <div id="card_name"></div>
-          <div id="card_clan"></div>
-          <div id="card_opcoes"></div>
-          <div class="initial-card">
-            <h2>Camarilla</h2>
-            <p class="card_text">
-              A Camarilla é a maior das seitas vampíricas, uma organização ampla
-              que ostensivamente representa e protege todos os vampiros ao
-              executar e promulgar a Máscara. Atualmente composta por seis clãs,
-              embora oficialmente considere todos os Membros sob seu alcance e
-              receba qualquer um que obedeça suas leis.
-            </p>
+            
+      <div class="cartas">
+        <div class="player-box">
+          <div class="hist-player">
+            <div class="box-hist"></div>
+          </div>
+          <div id="carta_jogador" class="card">
+            <div class="content">
+              <div id="imagem_carta_jogador"></div>
+              <div id="card_name"></div>
+              <div id="card_clan"></div>
+              <div id="card_opcoes"></div>
+              <div class="initial-card">
+                <h2>Camarilla</h2>
+                <p class="card_text">
+                  A Camarilla é a maior das seitas vampíricas, uma organização ampla
+                  que ostensivamente representa e protege todos os vampiros ao
+                  executar e promulgar a Máscara. Atualmente composta por seis clãs,
+                  embora oficialmente considere todos os Membros sob seu alcance e
+                  receba qualquer um que obedeça suas leis.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div id="carta_maquina" class="card">
-        <div class="content">
-          <div id="imagem_carta_maquina"></div>
-          <div id="card_name_mc"></div>
-          <div id="card_clan_mc"></div>
-          <div id="card_opcoes_mc"></div>
-          <div id="initial-card" class="initial-card">
-            <h2>Sabbat</h2>
-            <p class="card_text">
-              Em Vampiro: A Máscara, o Sabá é uma ampla organização de cainitas
-              que rejeita as Tradições. Diferente da Camarilla, o Sabá acredita
-              nos Antediluvianos e em Caim. Também conhecido como a Espada de
-              Caim, pois creem que serão o exército que Caim usará para destruir
-              os Antediluvianos quando a Gehenna chegar.
-            </p>
+        <div class="comp-box">
+          <div id="carta_maquina" class="card">
+            <div class="content">
+              <div id="imagem_carta_maquina"></div>
+              <div id="card_name_mc"></div>
+              <div id="card_clan_mc"></div>
+              <div id="card_opcoes_mc"></div>
+              <div id="initial-card" class="initial-card">
+                <h2>Sabbat</h2>
+                <p class="card_text">
+                  Em Vampiro: A Máscara, o Sabá é uma ampla organização de cainitas
+                  que rejeita as Tradições. Diferente da Camarilla, o Sabá acredita
+                  nos Antediluvianos e em Caim. Também conhecido como a Espada de
+                  Caim, pois creem que serão o exército que Caim usará para destruir
+                  os Antediluvianos quando a Gehenna chegar.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="resultado">
+            <h3>As Seitas nunca se reconciliam de fato</h3>
+            <div id="resultado"></div>
           </div>
         </div>
-      </div>
-
-      <div class="resultado">
-        <h3>As Seitas nunca se reconciliam de fato</h3>
-        <div id="resultado"></div>
       </div>
 
       <div class="pontuacao">
