@@ -255,6 +255,7 @@ let pontuacao = 5;
 let cartaMaquina
 let cartaJogador
 let descJogador = document.querySelector('.box-hist')
+let descComp = document.querySelector('.box-comp')
 let atributoSelecionadoMaquina
 let resultadoJogo = document.getElementById('resultado')
 
@@ -275,7 +276,7 @@ function sortear() {
   document.getElementById('btnJogar').disabled = false
 
   descJogador.innerHTML = cartaJogador.descricao
-  resultadoJogo.innerHTML = cartaMaquina.descricao
+  descComp.innerHTML = cartaMaquina.descricao
   
   exibirOpcoes()
 }

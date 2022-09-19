@@ -10,7 +10,7 @@
   --bloodRed: rgb(122, 9, 9);
   --imagemCartaJogador: url(./images/gregorio.png);
 
-  border: solid 1px yellowgreen;
+  /* border: solid 1px yellowgreen; */
 }
 
 body {
@@ -64,28 +64,36 @@ header img {
   transition: 400ms ease-in-out;
   cursor: pointer;
 }
-
 .btn button:hover {
   background: var(--bloodRed);
-  padding: 1rem 1.5rem;
   border: var(--bloodRed);
   transition: 400ms ease-in-out;
 }
 
+
 .cartas {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .player-box, .comp-box {
   display: flex;
+  width: fit-content;
+  justify-content: center;
 }
 
 .hist-player {
   position: relative;
+  visibility: hidden;
+  z-index: 2;
+  top: 10%;
+  left: calc(100% - 17.5rem);
   width: 15rem;
   height: fit-content;
   margin: 1rem 0.5rem;
-  padding: 0.8rem;
+  padding: 1.5rem;
   background: rgba(60, 64, 65, .5);
   border-radius: 10px;
   border-top: 1px solid #fff;
@@ -94,7 +102,37 @@ header img {
   box-shadow: 1.25rem 1.25rem 3rem rgba(0, 0, 0, 0.5);
 }
 
-.box-hist{
+.hist-comp {
+  position: relative;
+  visibility: hidden;
+  z-index: 2;
+  top: 10%;
+  right: calc(100% - 17.5rem);
+  width: 15rem;
+  height: fit-content;
+  margin: 1rem 0.5rem;
+  padding: 1.5rem;
+  background: rgba(60, 64, 65, .5);
+  border-radius: 10px;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  backdrop-filter: blur(8px);
+  box-shadow: 1.25rem 1.25rem 3rem rgba(0, 0, 0, 0.5);
+}
+
+
+.hist-player::after, .hist-comp::after {
+  position: absolute;
+  content: "X";
+  cursor: pointer;
+  color: #fff;
+  width: 1rem;
+  height: 1rem;
+  top: 0.3rem;
+  left: calc(100% - 1.3rem);
+}
+
+.box-hist, .box-comp {
   color: #fff;
   font-size: 0.8rem;
   font-weight: 400;
@@ -105,13 +143,13 @@ header img {
 
 .card {
   position: relative;
-  width: 18rem;
-  height: 25rem;
-  margin: 0.5rem;
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 18rem;
+  height: 25rem;
+  margin: 0.5rem;
+  /* overflow: hidden; */
   box-shadow: 1.25rem 1.25rem 3.125rem rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
@@ -120,6 +158,9 @@ header img {
 
 
 .content {
+  position: absolute;
+  left: 0;
+  top: 0;
   padding: 1.25rem;
   text-align: center;
   transition: 0.5s;
@@ -137,25 +178,24 @@ header img {
 }
 
 #imagem_carta_jogador img{
-  position: relative;
-  top: 4.8rem;
-  border: 2px solid rebeccapurple;
-
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 #imagem_carta_maquina  img{
   position: absolute;
   top: -0.3rem;
-  left: -.3rem;
+  left: -0.3rem;
   border: 2px solid rebeccapurple;
 }
 
 #card_name {
-  display: grid;
-  width: 100vw;
+  display: flex;
+  width: 100%;
   position: relative;
-  top: -18.5rem;
-  right: 4.3rem;
+  top: -18.7rem;
+  left: 3rem;
   font-size: 0.9rem;
   color: var(--bloodRed);
   pointer-events: none;
@@ -202,12 +242,9 @@ header img {
 }
 
 #card_opcoes {
-  display: inline-block;
-  position: relative;
-  height: 5rem;
-  width: 11rem;
-  top: -6rem;
-  left: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
 
   padding: 0.3rem 2rem;
   font-size: 0.8rem;
@@ -354,9 +391,12 @@ header img {
 /* ---------------------------------- */
 
 footer {
-  display: grid;
-  place-content: center;
-  margin: 1rem 0;
+  display: flex;
+  width: 100vw;
+  height: 3rem;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0; 
 }
 
 footer p {
@@ -364,7 +404,7 @@ footer p {
 }
 
 footer span {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   border: 2px solid greenyellow;
   padding: 2px;
   margin: 3px;
