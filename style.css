@@ -17,6 +17,7 @@ body {
   background: rgb(31, 26, 20);
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
+  overflow-x: hidden;
 }
 
 header {
@@ -50,6 +51,7 @@ header img {
   width: fit-content;
   place-content: center;
   padding: 1rem;
+  margin-left: 10rem;
 }
 
 .btn button {
@@ -70,7 +72,6 @@ header img {
   transition: 400ms ease-in-out;
 }
 
-
 .cartas {
   display: flex;
   justify-content: center;
@@ -80,7 +81,9 @@ header img {
 
 .player-box, .comp-box {
   display: flex;
-  width: fit-content;
+  margin: 1rem;
+  width: 18rem;
+  height: 25rem;
   justify-content: center;
 }
 
@@ -142,14 +145,14 @@ header img {
 /* --------------- CARTAS --------------- */
 
 .card {
-  position: relative;
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 18rem;
   height: 25rem;
   margin: 0.5rem;
-  /* overflow: hidden; */
+  overflow: hidden;
   box-shadow: 1.25rem 1.25rem 3.125rem rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
@@ -174,7 +177,7 @@ header img {
   top: 2rem;
   left: 1rem;
   place-content: center;
-  max-width: 16rem;
+  width: 16rem;
 }
 
 #imagem_carta_jogador img{
@@ -187,14 +190,13 @@ header img {
   position: absolute;
   top: -0.3rem;
   left: -0.3rem;
-  border: 2px solid rebeccapurple;
 }
 
 #card_name {
   display: flex;
-  width: 100%;
-  position: relative;
-  top: -18.7rem;
+  width: fit-content;
+  position: absolute;
+  top: 50%;
   left: 3rem;
   font-size: 0.9rem;
   color: var(--bloodRed);
@@ -202,22 +204,24 @@ header img {
 }
 
 #card_name_mc {
-  display: grid;
+  display: flex;
   width: fit-content;
   position: absolute;
   top: 2rem;
-  left: 2.5rem;
+  left: 3rem;
   font-size: 0.9rem;
   color: var(--bloodRed);
   pointer-events: none;
 }
 
 #card_clan {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   position: relative;
-  width: 100vw;
-  top: -18rem;
-  right: 2rem;
+  width: 100%;
+  padding: 3px;
+  top: 2.5rem;
+  right: 0rem;
   background: rgba(255,255,255,.4);
   font-size: 1.3rem;
   font-weight: 800;
@@ -227,12 +231,12 @@ header img {
 }
 
 #card_clan_mc {
-  display: block;
-  position: absolute;
-  width: 22rem;
-  top: 4rem;
-  left: -7rem;
-  padding: 0 1rem;
+  display: flex;
+  position: relative;
+  width: 100%;
+  top: 2.5rem;
+  left: 0;
+  padding: 3px;
   background: rgba(255,255,255,.4);
   font-size: 1.3rem;
   font-weight: 800;
@@ -243,9 +247,9 @@ header img {
 
 #card_opcoes {
   position: absolute;
-  top: 0;
-  left: 0;
-
+  width: 15rem;
+  top: 380%;
+  left: 40%;
   padding: 0.3rem 2rem;
   font-size: 0.8rem;
   font-weight: 700;
@@ -261,7 +265,6 @@ header img {
   width: 11rem;
   top: 18.5rem;
   left: 3rem;
-
   padding: 0.3rem 2rem;
   font-size: 0.8rem;
   font-weight: 700;
@@ -310,9 +313,9 @@ header img {
 
 .pontuacao {
   display: flex;
+  margin-top: 10px;
   justify-content: center;
   align-items: center;
-  min-height: 2rem;
 }
 
 .drops {
@@ -393,10 +396,10 @@ header img {
 footer {
   display: flex;
   width: 100vw;
-  height: 3rem;
+  height: 1.5rem;
   justify-content: center;
   align-items: center;
-  margin: 1rem 0; 
+  margin: 1rem; 
 }
 
 footer p {
